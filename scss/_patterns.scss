@@ -1,0 +1,83 @@
+.btn{
+    padding: 0px 1.6rem;
+    line-height: 4.1rem;
+    display: inline-flex;
+    align-items: center;
+    border-radius: 0.3rem;
+    font-size: 1.4rem;
+    text-align: center;
+    color: $white;
+    border: 0.1rem solid transparent;
+    transition: color .3s, background-color .3s;
+
+    &-primary{
+        background-color: $primary-default;
+        border-color: $primary-default;
+        &:hover{
+            background-color: $primary-light;
+        }
+    }
+
+    &-outline{
+        border-color: $white;
+        &:hover{
+            background-color: $white;
+            color:$neutral-200;
+        }
+    }
+}
+
+.game-card{
+    display: block;
+    width: 100%;
+    max-width: 28rem;
+    &:hover{
+        .image{
+            img{
+                transform: scale(1.05);
+            }
+        }
+    }
+    .image{
+        overflow: hidden;
+        border-radius: 0.4rem;
+        width: 100%;
+        height: 38.3rem;
+        margin-bottom: 2.4rem;
+        img{
+            transition: transform .3s ease-in;
+        }
+    }
+    .info{
+        h3{
+            font-weight: 600;
+            font-size: 1.8rem;
+            line-height: 2.7rem;
+            margin-bottom: 0.4rem;
+        }
+        span{
+            font-size: 1.4rem;
+            line-height: 2.1rem;
+            color: $white;
+            opacity: 0.8;
+        }
+    }
+    @media(max-width:1200px){
+        .image{
+            height: 34.3rem;
+        }
+    }
+    @media(max-width:991px){
+        .image{
+            height: 30.3rem;
+        }
+    }
+    @media(max-width:560px){
+        .image{
+            margin-bottom: 0;
+        }
+        .info{
+            display: none;
+        }
+    }
+}
